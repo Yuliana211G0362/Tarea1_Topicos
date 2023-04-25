@@ -1,0 +1,74 @@
+﻿<Window x:Class="Tarea1_Topicos.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tarea1_Topicos"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel>
+        <Grid>
+            <Grid.Resources>
+
+                <Style TargetType="TextBox">
+                    <Setter Property="Margin" Value="15"></Setter>
+                    <Setter Property="Height" Value="30"></Setter>
+                </Style>
+
+            </Grid.Resources>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="230"></ColumnDefinition>
+                <ColumnDefinition  Width="570"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions >
+                <RowDefinition Height="45"></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="105"></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="45"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Border Grid.ColumnSpan="3">
+                <TextBlock x:Name="DatosPersonales" Foreground="White" Background="RoyalBlue" TextAlignment="Left" FontSize="15" FontWeight="Normal" Padding="10">Datos personales</TextBlock>
+            </Border>
+            <Border Grid.Row="1">
+                <TextBlock Margin="10,5,0,0" > Nombre(s)</TextBlock>
+            </Border >
+            <Border Grid.Row="2" >
+                <TextBlock Margin="10,0,0,0"> Apellidos</TextBlock>
+            </Border>
+            <Border Grid.Row="3" >
+                <TextBlock Margin="10,0,0,0"> Email</TextBlock>
+            </Border>
+            <Border Grid.Row="5">
+                <TextBlock Margin="10,0,0,0"> Genero</TextBlock>
+            </Border>
+            <Border Grid.Row="4">
+                <StackPanel Grid.Row="4">
+                    <StackPanel.Resources>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="TextWrapping" Value="Wrap"></Setter>
+                            <Setter Property="Background" Value="WhiteSmoke"></Setter>
+                        </Style>
+                    </StackPanel.Resources>
+                    <TextBlock Margin="10,0,0,0" FontWeight="Black"> Direccion</TextBlock>
+                    <TextBlock Margin="6,0,0,0" Foreground="Gray" Height="90">Escriba la direccion completa incluyendo, datos de la calle, colonia y ciudad</TextBlock>
+                </StackPanel>
+            </Border>
+            <WrapPanel Grid.Row="6" Grid.ColumnSpan="2">
+                <Button Foreground="White" FontSize="12" Background="RoyalBlue" Height="30" Width="117" Content="Enviar informacion"/>
+                <Button FontSize="12" Height="30" Width="66" Content="Cancelar" />
+            </WrapPanel>
+            <ComboBox Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Height="30" Margin="15" >
+                <ComboBoxItem>Masculino</ComboBoxItem>
+                <ComboBoxItem>Femenino</ComboBoxItem>
+            </ComboBox>
+            <TextBox Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"></TextBox>
+            <TextBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"></TextBox>
+            <TextBox Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2"></TextBox>
+            <TextBox Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Height="74" Margin="10"></TextBox>
+
+        </Grid>
+    </DockPanel>
+</Window>
